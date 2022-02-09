@@ -1,6 +1,6 @@
 ﻿
 
-//220113
+//과제 수행
 
 #include <stdio.h>
 #include <stdlib.h>

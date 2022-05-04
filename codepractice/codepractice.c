@@ -5,4 +5,9 @@ n, k = map(int, input().split())
 b = factorial(n) // (factorial(k) * factorial(n - k))
 print(b)
 
-??
+a, b = map(int, input().split())
+c = list(map(int, input().split()))
+
+for i in c :
+if i < b :
+    print(i, end = " ")

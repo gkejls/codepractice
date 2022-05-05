@@ -11,3 +11,4 @@ c = list(map(int, input().split()))
 for i in c :
 if i < b :
     print(i, end = " ")
+    잘살고싶다 성공하고싶다

@@ -75,7 +75,7 @@ def bfs(node) :
     q = deque()
         q.append(node)
         check[node] = 0
-        while q :  sssssss
+        while q :  ssssssss
             node = q.popleft()
             d = [node - 1, node + 1]
             if graph[node] :

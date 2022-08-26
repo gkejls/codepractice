@@ -67,7 +67,8 @@ else : #k < n
         print(sum(btwss))
 
 
-#220602
+        성실하게.. 내일 정말 최선을 다해서! 해보가
+        #220602
 from collections import deque
 import sys
 

@@ -16,6 +16,7 @@ int main(int argc, char* argv[]) {
 int power(int base, int n)
 {
 	int i, p;
+	int i, p;
 	p = 1;
 	for (i = 1; i <= n; i++)
 		p = p * base;

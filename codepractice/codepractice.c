@@ -1,29 +1,19 @@
-﻿#include <stdio.h>
-#include <stdlib.h>
+﻿
+def fact(n) :
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+    f = 1                      # 곱을 계산할 변수, 초깃값은 1
 
-/*count digits, white space, nothers */
-#define MAXLINE 1000 /*maximum input line size*/
+    for i in range(1, n + 1) : # 1부터 n까지 반복(n + 1은 제외)
 
-int getline(char line[], int maxline);
-void copy(char to[], char from[]);
+        f = f * i              # 곱셈 연산으로 수정
 
-/*print longest input line*/
-int main(int argc, char* argv[]) {
-	#0830
-		int len; 				/* current line length */
-	int max;				/* maximum length so far */
-	char line[MAXLINE]; 	/* current input line */
-	char longest[MAXLINE]; /* longest line saved here */
+        return f
 
-	max = 0;
-	while ((len = getline(line, MAXLINE)) > 0) //??
-		if (len > max) {
-			mam = len;
-			copy(longest, line);
-		}
-	return 0;
-}
 
-//c언언데 설정하는 거 너무 귀찮아서 그동안 안 만짐..
+
+        print(fact(1))                 # 1!= 1
+
+        print(fact(5))                 # 5!= 120
+
+        print(fact(10))                # 10!= 3628800
+

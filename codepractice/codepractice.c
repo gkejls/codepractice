@@ -1,15 +1,38 @@
-﻿void setup() {
-	//put your setup code here, to run once!
-	pinMode(13, OUTPUT);
-	//the setup function runs once when you press reset or power the board
-	//initialize digital pin 13 as an output.
+﻿#include <iostream>
+#include <algorithm>
+using namespace std;
+int dairy_product[100000];
+
+// 내림차순
+bool DESC(int a, int b) {
+	return a > b;
 }
 
-void loop() {
-	//put your main code here, to run repeatedly
-	digitalWrite(13, HIGH);         //turn the LED on (HIGH is the voltage level)
-	delay(1000);                    //wait for a second
-	digitalWrite(13, LOW);          //turn the LED off by making the voltage LOW
-	delay(1000);
-	//the loop function runs over and over again forever
+int main() {
+	int N;
+	int sum = 0;
+
+	cin >> N;
+
+	for (int i = 0; i < N; i++) {
+		cin >> dairy_product[i];
+	}
+
+	// 내림차순으로 정렬
+	sort(dairy_product, dairy_product + N, DESC);
+
+	for (int i = 0; i < N; i++) {
+
+		// 3개씩 묶은 것 중 가장 작은 값 (3번째 값, 배열이므로 i+1)
+		if ((i + 1) % 3 == 0) {
+			continue;	// 계산하지 않음
+		}
+		else {
+			sum += dairy_product[i];
+		}
+	}
+
+	cout << sum;
+
+	return 0;
 }

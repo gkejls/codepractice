@@ -15,6 +15,6 @@ void loop() {
 	delayMicroseconds(10); //충분히 발사되도록 멈춤
 	digitalWrite(2, LOW);
 
-	long duaration = pulseln(3, HIGH); //발사된 초음파가 에코부분으로 돌아올 때까지 시간을 잼
+	long duaration = pulseln(3, HIGH); //발사된 초음파가 에코부분으로 돌아올 때까지 시간을 잼// 오늘 3d도 하고 아두이노도 했지만 여기서 마치겠음..
 
 }

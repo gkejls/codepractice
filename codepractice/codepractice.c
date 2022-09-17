@@ -1,20 +1,52 @@
-﻿//0914
-void setup() {
-	pinMode(2, OUTPUT);
-	pinMode(3, OUTPUT); //초음파 센서 에코 트리그
-}
+﻿#include <iostream>
+#include <vector>
+#include <list>
 
-void loop() {
-	analogWrite(11, 0);
-	analogWrite(10, 0);
-	analogWrite(9, 0); //3색 led 색 꺼주기 위함
+using namespace std;
 
-	digitalWrite(2, LOW); //혹시나 trig 전압이 기존에 high일 수 있어 low로 처음 설정
-	delayMicroseconds(2);
-	digitalWrite(2, HIGH); //trig에서 초음파 발사 
-	delayMicroseconds(10); //충분히 발사되도록 멈춤
-	digitalWrite(2, LOW);
+int main()
+{
+	ios::sync_with_stdio(false);
+	cin.tie(NULL);
 
-	long duaration = pulseln(3, HIGH); //발사된 초음파가 에코부분으로 돌아올 때까지 시간을 잼// 오늘 3d도 하고 아두이노도 했지만 여기서 마치겠음..
+	list<int> josephus;
+	list<int>::iterator it;
+	vector<int> answer;
 
+	int n, k;
+	cin >> n >> k;
+
+	// 연결 리스트 초기화
+	for (int i = 1; i <= n; i++) {
+		josephus.push_back(i);
+	}
+
+	it = josephus.begin();
+
+	// 요세푸스 순열 생성
+	while (!josephus.empty()) {
+		for (int i = 0; i < k - 1; i++) {
+			it++;
+
+			// 맨 끝에 도달했으면 다시 처음으로 돌아감
+			if (it == josephus.end()) {
+				it = josephus.begin();
+			}
+		}
+
+		answer.push_back(*it);
+		it = josephus.erase(it);
+
+		// 맨 끝에 도달했으면 다시 처음으로 돌아감
+		if (it == josephus.end()) {
+			it = josephus.begin();
+		}
+	}
+
+	// 요세푸스 순열 출력
+	cout << "<";
+	for (int i = 0; i < n; i++) cout << answer[i] << (i < n - 1 ? ", " : "");
+	cout << ">\n";
+
+	return 0;
 }

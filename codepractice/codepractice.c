@@ -12,5 +12,5 @@ void setup() {
 	pinMode(trigPin, OUTPUT);
 	pinMode(echoPin, INPUT);
 	//트리거 핀의 초기값을 LOW로 설정
-	digitalWrite(trigPin, LOW);
+	digitalWrite(trigPin, LOW);s
 }

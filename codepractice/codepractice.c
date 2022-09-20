@@ -1,16 +1,26 @@
-﻿
-const char trigpin = 13;
-const char echopin = 12;
+﻿#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
 
-//펄스 폭과 거리 변수 설정
-int pulseWidth;
-int distance;
-int distanceOld;
+int main() {
+    int n;
+    cin >> n;
 
-void setup() {
-	Serial.begin(9600);
-	pinMode(trigPin, OUTPUT);
-	pinMode(echoPin, INPUT);
-	//트리거 핀의 초기값을 LOW로 설정
-	digitalWrite(trigPin, LOW);s
+    vector<pair<int, int>> v(n);
+    for (int i = 0; i < n; i++) {
+        cin >> v[i].first;
+        v[i].second = i;
+    }
+
+    sort(v.begin(), v.end());
+
+    int ans = -1;
+    for (int i = 0; i < n; i++) {
+        if (ans < v[i].second - i) {
+            ans = v[i].second - i;
+        }
+    }
+
+    cout << ans + 1;
 }

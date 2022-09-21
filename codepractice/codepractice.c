@@ -24,3 +24,4 @@ int main() {
 
     cout << ans + 1;
 }
+s

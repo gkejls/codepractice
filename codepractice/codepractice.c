@@ -1,27 +1,29 @@
-﻿#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
-
-int main() {
-    int n;
-    cin >> n;
-
-    vector<pair<int, int>> v(n);
-    for (int i = 0; i < n; i++) {
-        cin >> v[i].first;
-        v[i].second = i;
-    }
-
-    sort(v.begin(), v.end());
-
-    int ans = -1;
-    for (int i = 0; i < n; i++) {
-        if (ans < v[i].second - i) {
-            ans = v[i].second - i;
-        }
-    }
-
-    cout << ans + 1;
+﻿void setup() {
+    pinMode(2, OUTPUT);
+    pinMode(3, INPUT);
 }
-s
+
+void loop() {
+    analogWrite(11, 0);
+    analogWrite(10, 0);
+    analogWrite(9, 0);
+
+    digitalWirte(2, LOW);
+    delayMicroseconds(2);
+    digitalWirte(2, HIGH);
+    delayMicroseconds(10);
+    digitalWirte(2, LOW);
+
+    long duration = pulseIn(3, HIGH);
+
+    if (duration == 0) {
+        return;
+    }
+
+    long distance = duration / 58.2;
+
+    if (distance < 10) {
+        analogWrite(11, 255);
+    }
+    else if (distance)
+}

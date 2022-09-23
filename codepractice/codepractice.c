@@ -11,7 +11,7 @@ void loop() {
     digitalWirte(2, LOW);
     delayMicroseconds(2);
     digitalWirte(2, HIGH);
-    delayMicroseconds(10);
+    delayMicroseconds(10);s
     digitalWirte(2, LOW);
 
     long duration = pulseIn(3, HIGH);

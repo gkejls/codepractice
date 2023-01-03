@@ -30,7 +30,7 @@ int main(void) {
     scanf("%d %d %d", &M, &N, &K);
     for (int i = 0; i < K; i++) {
         int x1, x2, y1, y2;
-        scanf("%d %d %d %d", &x1, &y1, &x2, &y2);wwww
+        scanf("%d %d %d %d", &x1, &y1, &x2, &y2);wwwwjj
         for (int j = y1; j < y2; j++) {
             for (int k = x1; k < x2; k++) {
                 arr[j][k] = 1;

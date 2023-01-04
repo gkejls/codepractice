@@ -37,7 +37,7 @@ int main(void) {
                 visited[j][k] = true;
             }
         }
-    }
+    }ss
     for (int i = 0; i < M; i++) {
         for (int j = 0; j < N; j++) {
             if (arr[i][j] == 0 && visited[i][j] == false) {

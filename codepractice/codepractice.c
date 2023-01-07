@@ -39,7 +39,8 @@ int main(void) {
         }
     }ssss
     for (int i = 0; i < M; i++) {
-        for (int j = 0; j < N; j++) {
+        for (int j = 0; j < N; j++) {ddd
+        for (int j = 0; j < N; j++) {ddd
             if (arr[i][j] == 0 && visited[i][j] == false) {
                 cnt = 0;
                 dfs(i, j);

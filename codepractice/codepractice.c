@@ -22,7 +22,7 @@ void dfs(int x, int y) {
 
         if (nx >= 0 && ny >= 0 && nx < M && ny < N && !visited[nx][ny]) {
             dfs(nx, ny);
-        }
+        }ss
     }
 }
 

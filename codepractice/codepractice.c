@@ -25,8 +25,7 @@ void dfs(int x, int y) {
         }ss
     }
 }
-
-내가 잘 할 수 있을까? 의문이 들 때는 그냥 고.
+opencv  공부중
 int main(void) {
     scanf("%d %d %d", &M, &N, &K);
     for (int i = 0; i < K; i++) {

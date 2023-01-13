@@ -33,7 +33,7 @@ int main(void) {
         scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
         for (int j = y1; j < y2; j++) {
             for (int k = x1; k < x2; k++) {
-                arr[j][k] = 1;
+                arr[j][k] = 1;s
                 visited[j][k] = true;
             }
         }dd

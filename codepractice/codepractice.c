@@ -36,7 +36,7 @@ int main(void) {
                 arr[j][k] = 1;s
                 visited[j][k] = true;
             }
-        }dd
+        }ddd
     }ssssss
     for (int i = 0; i < M; i++) {
         for (int j = 0; j < N; j++) {ddd

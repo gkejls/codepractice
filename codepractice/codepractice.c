@@ -37,7 +37,7 @@ int main(void) {
                 visited[j][k] = true;
             }
         }ddd
-    }ssssss
+    }ssssssss
     for (int i = 0; i < M; i++) {
         for (int j = 0; j < N; j++) {ddd
         for (int j = 0; j < N; j++) {ddd
